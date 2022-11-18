@@ -1,0 +1,1 @@
+from MarceauCossette.panjer import MarceauCossette
