@@ -1,1 +1,1 @@
-from MarceauCossette.panjer import MarceauCossette
+from Marceau.panjer import Cossette
