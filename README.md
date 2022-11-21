@@ -46,13 +46,10 @@ provide respectivly an brief help and two example of the following algorithm.
 
 ## Panjer's Algorithm
 
-We use the following notation for our Algorithm: we are interested in the compound random variable 
-
-If $M>0,X=\sum_{i=1}^{N}B_{i}$
-If $M=0,X=0$
+We are interested in the compound random variable: $$X=\sum_{i=1}^{N}B_{i}$$
 
 where:
-* $M$ is a frequence random variable from [Panjer-Katz] probability distribution family, otherwise known as (a, b, $0$) [class of distributions].
+* $M$ is a frequence random variable from [Panjer-Katz] probability distribution family, otherwise known as (a, b, $0$)[class of distributions]. For $M=0$ we have $X=0$.
 * $\underline{B}={B_{k},k\in\mathbb{N}^{+}}$ are positive i.i.d random variable defined on $\mathbb{N}$.
 * $\underline{B}$ and $M$ are independant.
 
@@ -80,7 +77,7 @@ In order to compute the Panjer's Algorithm, we need to enter the following featu
 
 ## Example
 #### Example 1
-Let $X\sim PComp(\lambda=2,F_{B}),$ with $B\sim Bin(10;0.4)$.
+Let $X\sim PComp(\lambda=2,F_{B}),$ with $B\sim Bin(10,0.4)$.
 
 We implement the following
 
