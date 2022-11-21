@@ -84,7 +84,7 @@ We implement the following
 ```sh
 model= Marceau.Cossette(k=10,parameters=[2],method='Poisson',generator_method='Binomial',generator_param=[10,0.4]) 
 ```
-And we get the our output with the call model.panjer():
+And we get our output with the call model.panjer():
 ```sh
 model.panjer()
  >>> f(10*1)=0.05434563071580669 
