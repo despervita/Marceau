@@ -8,7 +8,7 @@ In the following paragraphs, I am going to describe how you can get and use Marc
 
 ###  Getting it
 
-To download Marceau, either fork this [Github][git-repo-url] repository or simply use Pypi via pip.
+To download Marceau, either from this [Github][git-repo-url] repository or simply use Pypi via pip.
 ```sh
 $ pip install Marceau
 ```
