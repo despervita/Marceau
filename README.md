@@ -52,8 +52,8 @@ If $M>0,X=\sum_{i=1}^{N}B_{i}$
 If $M=0,X=0$
 
 where:
-* $M$ is a frequence random variable from [Panjer-Katz] probability distribution family, otherwise known as (a,b,$0$) [class of distributions].
-* $\underline{B}=\{B_{k},k\in\mathbb{N}^{+}\}$ are positive i.i.d random variable defined on $\mathbb{N}$.
+* $M$ is a frequence random variable from [Panjer-Katz] probability distribution family, otherwise known as (a, b, $0$) [class of distributions].
+* $\underline{B}={B_{k},k\in\mathbb{N}^{+}}$ are positive i.i.d random variable defined on $\mathbb{N}$.
 * $\underline{B}$ and $M$ are independant.
 
 Therefore, the random variable $X$ has value in $\mathbb{N}$. And the Panjer's recursive method works as follow:
