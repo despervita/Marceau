@@ -54,8 +54,8 @@ where:
 * $\underline{B}$ and $M$ are independant.
 
 Therefore, the random variable $X$ has value in $\mathbb{N}$. And the Panjer's recursive method works as follow:
-* If $B_{i}$ are distributed on a lattive $h\mathbb{N}$ with latticewidth $h>0$. $B\in\{0,1h,2h,....\}$
-* We have $X\in A_{h}=\{0,1h,2h,....\}$
+* If $B_{i}$ are distributed on a lattive $h\mathbb{N}$ with latticewidth $h>0$. $B\in$\{ $0$, $1h$, $2h$,....\}
+* We have $X\in$ $A_{h}$=\{ $0$, $1h$, $2h$,....\}
 * With $W_{M}$ beeing the probability generating function of M, we compute $f_{X}(0)=W_{M}(f_{B}(0)$
 * The Panjer's recursive relation states for $k>0$: $$f_{X}(kh)=\frac{1}{1-af_{B}(0)}\sum_{i=1}^{k}(a+b\frac{jh}{kh})f_{B}(jh)\times f_{X}((k-j)h)$$
 
@@ -90,9 +90,9 @@ model.panjer()
  >>> f(10*1)=0.05434563071580669 
  F(10*1)=0.6980136730471336 
  ```
-#### Example 2
+#### Example 2 
 
-Let $X\sim PComp(\lambda=2,F_{B}),$ with $B \in \{1000,2000,\cdots , 6000\}$ and the following values for $f_{B}(hk)$ with $h=1000$:
+Let $X\sim PComp(\lambda=2,F_{B}),$ with $B \in$ \{ $1000$, $2000$, ... , $6000$ \} and the following values for $f_{B}(hk)$ with $h=1000$:
 
 | $k$ | $0$ | $1$   | $2$   | $3$   | $4$    | $5$   | $6$   |
 |---|---|-----|-----|-----|------|-----|------|
