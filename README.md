@@ -49,7 +49,7 @@ provide respectivly an brief help and two example of the following algorithm.
 We are interested in the compound random variable: $$X=\sum_{i=1}^{N}B_{i}$$
 
 where:
-* $M$ is a frequence random variable from [Panjer-Katz] probability distribution family, otherwise known as (a,b,$0$)[class of distributions]. For $M=0$ we have $X=0$.
+* $M$ is a frequence random variable from [Panjer-Katz] probability distribution family, otherwise known as (a,b, $0$)[class of distributions]. For $M=0$ we have $X=0$.
 * $\underline{B}={B_{k},k\in\mathbb{N}^{+}}$ are positive i.i.d random variable defined on $\mathbb{N}$.
 * $\underline{B}$ and $M$ are independant.
 
