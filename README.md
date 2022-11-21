@@ -10,7 +10,7 @@ In the following paragraphs, I am going to describe how you can get and use Marc
 
 To download Marceau, either from this [Github][git-repo-url] repository or simply use Pypi via pip.
 ```sh
-$ pip install Marceau
+pip install Marceau
 ```
 
 ### Module
