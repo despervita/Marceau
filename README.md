@@ -48,19 +48,19 @@ provide respectivly an brief help and two example of the following algorithm.
 
 We use the following notation for our Algorithm: we are interested in the compound random variable 
 
-If $$\:\:M>0,\:X=\sum _{i=1}^{N}B_{i}$$
-If $$\:\:M=0,\:X=0$$
+If $M>0,X=\sum_{i=1}^{N}B_{i}$
+If $M=0,X=0$
 
 where:
-* $$M$$ is a frequence random variable from [Panjer-Katz] probability distribution family, otherwise known as (a,b,$$0$$) [class of distributions].
-* $$\underline{B}=\{B_{k},k\in\mathbb{N}^{+}\}$$ are positive i.i.d random variable defined on $$\mathbb{N}$$.
-* $$\underline{B}$$ and $$M$$ are independant.
+* $M$ is a frequence random variable from [Panjer-Katz] probability distribution family, otherwise known as (a,b,$0$) [class of distributions].
+* $\underline{B}=\{B_{k},k\in\mathbb{N}^{+}\}$ are positive i.i.d random variable defined on $\mathbb{N}$.
+* $\underline{B}$ and $M$ are independant.
 
-Therefore, the random variable $$X$$ has value in $$\mathbb{N}$$. And the Panjer's recursive method works as follow:
-* If $$B_{i}$$ are distributed on a lattive $$h\mathbb{N}$$ with latticewidth $$h>0$$. $$B\in\{0,1h,2h,....\}$$
-* We have $$X\in A_{h}=\{0,1h,2h,....\}$$
-* With $$W_{M}$$ beeing the probability generating function of M, we compute $$f_{X}(0)=W_{M}(f_{B}(0)$$
-* The Panjer's recursive relation states for $$k>0$$: $$\:\:\:f_{X}(kh)=\frac{1}{1-af_{B}(0)}\sum _{i=1}^{k}(a+b\frac{jh}{kh})f_{B}(jh)\times f_{X}((k-j)h)$$
+Therefore, the random variable $X$ has value in $\mathbb{N}$. And the Panjer's recursive method works as follow:
+* If $B_{i}$ are distributed on a lattive $h\mathbb{N}$ with latticewidth $h>0$. $B\in\{0,1h,2h,....\}$
+* We have $X\in A_{h}=\{0,1h,2h,....\}$
+* With $W_{M}$ beeing the probability generating function of M, we compute $f_{X}(0)=W_{M}(f_{B}(0)$
+* The Panjer's recursive relation states for $k>0$: $$f_{X}(kh)=\frac{1}{1-af_{B}(0)}\sum_{i=1}^{k}(a+b\frac{jh}{kh})f_{B}(jh)\times f_{X}((k-j)h)$$
 
 
 ### Implementation
@@ -70,17 +70,17 @@ In order to compute the Panjer's Algorithm, we need to enter the following featu
 | Arguments | Data Type| Description| 
 | ------ | ------ | ------ |
 | k | a positive integer| the epoch of recursion to find X distribution |
-| h | a strictly positive integer|  the latticewidth of $$B_{i}$$ distribution |
-| parameters | a list of length $$1$$ (poisson or geometric) or $$2$$ (binomial or negative binomial)| the parameters for the $$X$$ compound distribution |
-| method | a string with value 'Binomial', 'NegBinomial', 'Geometric' or 'Poisson'| the law of $$X$$ compound distribution |
-| fb | a list of length $$k+1$$ | this correspond to the $$f_{B}$$ values when those are given, default value is an empty list |
-| generator\_param| a list of length $$1$$ (poisson or geometric) or $$2$$ (binomial or negative binomial) | the parameters of the $$B$$ distribution, only needed if $$f_{B}$$ is empty, default value is empty|
-| generator\_method|   a string with value 'Binomial', 'NegBinomial', 'Geometric' or 'Poisson' | the law of $$B$$ distribution, only needed if $$f_{B}$$ is empty, default value is empty |
+| h | a strictly positive integer|  the latticewidth of $B_{i}$ distribution |
+| parameters | a list of length $1$ (poisson or geometric) or $2$ (binomial or negative binomial)| the parameters for the $X$ compound distribution |
+| method | a string with value 'Binomial', 'NegBinomial', 'Geometric' or 'Poisson'| the law of $X$ compound distribution |
+| fb | a list of length $k+1$ | this correspond to the $f_{B}$ values when those are given, default value is an empty list |
+| generator\_param| a list of length $1$ (poisson or geometric) or $2$ (binomial or negative binomial) | the parameters of the $B$ distribution, only needed if $f_{B}$ is empty, default value is empty|
+| generator\_method|   a string with value 'Binomial', 'NegBinomial', 'Geometric' or 'Poisson' | the law of $B$ distribution, only needed if $f_{B}$ is empty, default value is empty |
 
 
 ## Example
 #### Example 1
-Let $$X\sim PComp(\lambda=2,F_{B}),\:$$ with $$B\sim Bin(10;0.4)\:$$.
+Let $X\sim PComp(\lambda=2,F_{B}),$ with $B\sim Bin(10;0.4)$.
 
 We implement the following
 
@@ -95,11 +95,11 @@ model.panjer()
  ```
 #### Example 2
 
-Let $$X\sim PComp(\lambda=2,F_{B}),\:$$ with $$B \in \{1000,2000,\cdots , 6000\}$$ and the following values for $$f_{B}(hk)$$ with $$h=1000$$:
+Let $X\sim PComp(\lambda=2,F_{B}),$ with $B \in \{1000,2000,\cdots , 6000\}$ and the following values for $f_{B}(hk)$ with $h=1000$:
 
-| $$k$$ | $$0$$ | $$1$$   | $$2$$   | $$3$$   | $$4$$    | $$5$$   | $$6$$   |
+| $k$ | $0$ | $1$   | $2$   | $3$   | $4$    | $5$   | $6$   |
 |---|---|-----|-----|-----|------|-----|------|
-| $$f_{B}(hk)$$ | $$0$$ | $$0.2$$ | $$0.3$$ | $$0.2$$ | $$0.15$$ | $$0.1$$ | $$0.05$$ |
+| $f_{B}(hk)$ |$0$ | $0.2$ | $0.3$ | $0.2$ | $0.15$ | $0.1$ | $0.05$ |
 
 We implement the following:
 ```sh
