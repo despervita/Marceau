@@ -1,22 +1,25 @@
-from distutils.core import setup
-f = open("C:/Lyon/Programmation/Canada/MarceauCossette/README.md")
+from setuptools import setup
+
+with open('\README.md') as fp:
+    long_desc = fp.read()
+
 setup(
   name = 'Marceau',         # How you named your package folder (MyLib)
   packages = ['Marceau'],   # Chose the same as "name"
-  version = '0.431',      # Start with a small number and increase it with every change you make
+  version = '0.432',      # Start with a small number and increase it with every change you make
   license='MIT',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
   description = "Panjer's Algorithm in Python",   # Give a short description about your library
   author = 'Rayane Vigneron',                   # Type in your name
   author_email = 'rayanevigneron@yahoo.fr',      # Type in your E-Mail
   url = 'https://github.com/despervita/Marceau',   # Provide either the link to your github or to your website
-  download_url = 'https://github.com/despervita/Marceau/archive/v_0431.tar.gz',    # I explain this later on
+  download_url = 'https://github.com/despervita/Marceau/archive/v_0432.tar.gz',    # I explain this later on
   keywords = ['Panjer', 'Python'],   # Keywords that define your package best
   install_requires=[            # I get to this in a second
           'numpy',
           'scipy',
       ],
-   long_description=f.read(),
-    long_description_content_type='text/markdown',
+   long_description=long_desc,
+   long_description_content_type='text/markdown',
   classifiers=[
     'Development Status :: 3 - Alpha',      # Chose either "3 - Alpha", "4 - Beta" or "5 - Production/Stable" as the current state of your package
     'Intended Audience :: Developers',      # Define that your audience are developers
@@ -26,4 +29,3 @@ setup(
 
   ],
 )
-
